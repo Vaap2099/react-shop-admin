@@ -1,12 +1,17 @@
+const colors = require(tailwindcss/colors);
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    './src/**/*{html,js}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
+      colors: {
+        ...colors,
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-}
+  
+};
